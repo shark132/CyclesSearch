@@ -89,9 +89,8 @@ public class CycleSearch {
      * Global search for a particular vertex's dependecies
      */
     public void searchCycles() {
-        for (Map.Entry<Integer, HashSet<Integer>> pair : map.entrySet())
-        {
-            int id = pair.getKey();
+
+        for (int id : map.keySet()) {
             if (!globallySearchedId.contains(id)) {
                 //Search for the vertexs dependencies
                 deepSearch(id);
@@ -108,7 +107,7 @@ public class CycleSearch {
             //This case means that the given vertex is not a key element and has no dependencies
             return;
         }
-        else {
+
             deepSearchedId.add(id);
             innerPath.add(id);
             globallySearchedId.add(id);
@@ -119,7 +118,7 @@ public class CycleSearch {
                     int index = innerPath.indexOf(tmpId);
                     ArrayList<Integer> tmpCycle = new ArrayList<Integer>();
 
-                    for (int i = index; i < innerPath.size() - index; i++) {
+                    for (int i = index; i < innerPath.size(); i++) {
                         tmpCycle.add(innerPath.get(i));
                     }
                     //Adding the vertex to the end of the cycle in order to finish it
@@ -132,7 +131,7 @@ public class CycleSearch {
             }
             deepSearchedId.remove(id);
             innerPath.remove(innerPath.size() - 1);
-        }
+
     }
 
     public void printList() {

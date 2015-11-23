@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 
 /**
@@ -11,7 +12,8 @@ import java.io.IOException;
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(args[0]));
+       // BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         CycleSearch cycleSearch = new CycleSearch(reader);
         cycleSearch.searchCycles();
         cycleSearch.printList();
