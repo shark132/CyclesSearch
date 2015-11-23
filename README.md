@@ -20,6 +20,12 @@
     5___           ![Генерация](http://cs630716.vk.me/v630716939/145a/l-BHR5BG71w.jpg) <br>
 
 ##Сгенерированный jar файл лежит в /out/artifacts/CycleSearch_jar.
+
+3. Запуск проекта
+
+  > Запуск производится из командной строки командой
+    >> java -jar "jar-file-name>.jar " < "Input file's path"
+    
     
 
 
